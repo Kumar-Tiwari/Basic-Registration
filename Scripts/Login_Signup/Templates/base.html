@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Base{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'Home/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Login/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Signup/css/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+</head>
+<body>
+                          <!-- Navbar  -->
+    <nav class="container_base">
+            <div><a href="{% url 'home' %}"><img id="logo" class="logo" src="{% static 'Images/logo.png' %}"></a></div>
+            <div><p class="web-title">The <strong>Unique Bracket</strong></p></div>
+            <div class="menu">
+                <ul class="links">
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'signup' %}">Signup</a></li>
+                </ul>
+            </div>      
+    </nav><hr>
+    
+
+                            <!-- Body -->
+                            {% block main_body %} {% endblock %}
+</body>

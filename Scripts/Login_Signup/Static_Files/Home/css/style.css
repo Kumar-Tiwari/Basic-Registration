@@ -1,0 +1,44 @@
+.cycle{
+    text-align: center;
+}
+
+/* Bicycle animation */
+svg{
+    width:50%;
+    height:50%;
+}
+#left-wheel{
+    animation : wheel 1s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+
+
+}
+#right-wheel{
+    animation : wheel 1s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+
+}
+#biker{
+    animation: bike 1s ease-in-out infinite alternate;
+    transform-origin: bottom;
+
+
+}
+@keyframes bike{
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(20deg);
+    }
+}
+@keyframes wheel {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}

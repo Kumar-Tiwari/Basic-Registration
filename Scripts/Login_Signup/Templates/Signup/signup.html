@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}The Unique Bracket - Signup {% endblock %}
+{% block main_body %}
+<div class="signup-title"><h2>Signup</h2></div>
+<div class="container_signup">   
+    <div class="form_signup">
+    <form method="POST">
+        {% csrf_token %}
+        {{form.username.errors}}
+        {{form.username.label_tag}}<br>{{form.username}}<br><br>
+        {{form.first_name.label_tag}}<br>{{form.first_name}}<br><br>
+        {{form.last_name.label_tag}}<br>{{form.last_name}}<br><br>
+        {{form.email.label_tag}}<br>{{form.email}}<br><br>
+        {{form.password.label_tag}}<br>{{form.password}}<br><br>
+        <button class="btn-primary" type="submit"><strong>Signup</strong></button><br><br><br>
+    </form>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+
+{% block title %}The Unique Bracket - Login {% endblock %}
+{% block main_body %}
+
+<div class="signup-title"><h2>Login</h2></div>
+<div class="container_signup">   
+    <div class="form_signup">
+        
+    <form method="POST">
+        {% csrf_token %}
+        {% if form %}
+         {{form}} {% endif %}<br>
+         {% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+        <label for="id_username">Username:</label><br>
+        <input type="text" name="username" maxlength="150" required id="id_username"><br><br>
+        <label for="id_username">Password:</label><br>
+        <input type="password" name="password" autocomplete="new-password" maxlength="128" requied id="id_password"><br><br>
+        <button class="btn-primary" type="submit"><strong>Signup</strong></button><br><br><br>
+    </form>
+    </div>
+
+</div>
+
+
+{% endblock %}

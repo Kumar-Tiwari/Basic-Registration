@@ -1,0 +1,72 @@
+.container_signup{
+    background:linear-gradient(to bottom, #d6d4ba 57%, #ffff99 81%);
+    display: flex;
+    justify-content:center;
+    align-self: center;
+    padding-top:3%;
+    height:100%;
+    width:40%;
+    margin:auto;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc; 
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;  
+    box-shadow:         3px 3px 5px 6px #ccc; 
+
+}
+ .form_signup{
+    width:100%;
+    text-align: center;
+   
+
+}
+.signup-title{
+    text-align:center;
+    font-family: "Comic Sans MS",cursive,sans-serif;
+}
+
+input[type=text],input[type=email],input[type=password]
+{
+    background:transparent;
+    border:none;
+    border-radius:0;
+    border-bottom: 2px solid green;
+}
+input[type=text],input[type=email],input[type=password]:focus{
+    outline:none;
+    font-family: "Comic Sans MS",cursive,sans-serif;
+}
+label{
+    font-family: "Comic Sans MS",cursive,sans-serif;
+}
+input[type=text],input[type=email],input[type=password]:valid{
+    outline:none;
+}
+input[type=text],input[type=email],input[type=password]:invalid{
+    outline:none;
+}
+.btn-primary{
+    font-family: "Comic Sans MS",cursive,sans-serif;
+    width:20%;
+    border-radius:5px;
+}
+.btn-primary:hover{
+    font-family: "Comic Sans MS",cursive,sans-serif;
+    width:23%;
+    -webkit-box-shadow: 1px 1px 2px 3px #ccc; 
+    -moz-box-shadow:    1px 1px 3px 3px #ccc;  
+    box-shadow:         1px 1px 3px 3px #ccc; 
+
+}
+@media only screen and (max-width: 600px) {
+    .container_signup{
+        background:linear-gradient(to bottom, #d6d4ba 57%, #ffff99 81%);
+        display: flex;
+        justify-content:center;
+        padding-top:3%;
+        height:100%;
+        width:100%;
+        -webkit-box-shadow: 3px 3px 5px 6px #ccc; 
+        -moz-box-shadow:    3px 3px 5px 6px #ccc;  
+        box-shadow:         3px 3px 5px 6px #ccc; 
+    
+    }
+  }
